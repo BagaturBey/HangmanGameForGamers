@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    font-weight:bold
   }
   body {
     background-image: url("bg.jpg");
@@ -61,8 +62,8 @@
   }
   #letter-container button {
     cursor: pointer;
-    height: 2.4em;
-    width: 2.4em;
+    height: 3em;
+    width: 3em;
     border-radius: 0.3em;
     background-color: #ffffff;
   }
