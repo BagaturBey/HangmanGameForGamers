@@ -8,11 +8,29 @@ const canvas = document.getElementById("canvas");
 const resultText = document.getElementById("result-text");
 //Options values for buttons
 let options = {
-rpg: ["Witcher","ElderScrolls","Diablo","Fallout","DiscoElysium","MountandBlade","DarkSouls"],
-moba: ["LeagueofLegends", "Dota", "Smite", "MobileLegends", "HeroesofTheStorm", "ArenaofValor","HeroesofNewerth"],
-fps: ["CounterStrike","Halflife","Quake","Valorant","Overwatch","CallofDuty","MedalofHonor","Battlefield","Battlefront"],
-sports: ["Nba","Fifa","Pes","Nfl","TonyHawksProSkater","FootballManager","Motogp"],
-strategy:["AgeofEmpires","Warcraft","Starcraft","TotalWar","Civilization"],
+rpg: ["TitanQuest","Fable","Torchlight","DivinityOriginalSin","DragonAgeInquisition","DarkestDungeon","KingdomHearts",
+"DragonWarrior","FinalFantasy","TheLegendOfDragon","TheWitcher","Undertale","DragonQuest","BreathOfFire","StardewValley",
+"Persona","XenobladeChronicles","DragonAgeOrigins","ShinMegamiTensei","DemonsSouls","Fallout","BaldursGate","PokemonFireRed",
+"MonsterHunter","Bloodborne","MassEffect","TheElderScrolls","DeusEx","DarkSouls","Diablo","WorldOfWarcraft","ChronoTrigger","Gothic",
+"NeverwinterNights","DivineDivinity","Revenant","StarWarsKOTOR","Nox","Cyberpunk","PathofExile","NieRAutomata","DiscoElysium","GrimDawn",
+"LegendofGrimrock","MountAndBlade","ArxFatalis","DungeonSiege","Elex","Risen","DarkMessiah","HorizonZeroDawn","Sekiro","GreedFall","Borderlands",
+"Nioh","Torchlight","EldenRing"],
+puzzle:["Portal","LittleNightmares","PolyBridge","TheSwapper","ZeroEscapeTrilogy","Antichamber","TheRoomSeries","UnravelSeries","EscapeSimulator","TrineSeries",
+"TheWitness","Inside","Braid","Fez","Celeste","TheTalosPrinciple","WorldofGoo","MystSeries","BrainAge","PuzzleQuest","Rampart","Peggle","Swarm","Ilomilo",
+"VVVVVV","WorldofGoo","PokemonPuzzleLeague","Stacking","Stray","TheIncredibleMachine","Limbo","Tetris","Lemmings","Machinarium"],
+strategy:["CommandAndConquer","Civilization","CompanyofHeroes","DwarfFortress","Starcraft","Homeworld","Warcraft","SidMeiersGettysburg","TotalWar",
+"AgeOfEmpires","CrusaderKings","Factorio","BlackAndWhite","Dota","Sacrifice","SlayTheSpire","CombatMission","WorldinConflict","StarControl","RiseOfNations",
+"RailroadTycoon","Xcom","Hearthstone","Plantsvszombies","RimWorld","MiniMotorways","EuropaUniversalis","ZeusMasterofOlympus","HexShardsofFate","Warhammer",
+"Commandos","SupremeCommander","Startopia","GroundControl","TotalAnnihilation","PanzerCorps","Townscaper","TheLastFriend","AgeOfWonders","Desperados",
+"MonsterTrain","Wildermyth","CitiesSkylines","OxygenNotIncluded","Battlerite"],
+sports: ["TwoKNba","EaFifa","Pes","MaddenNfl","TonyHawksProSkater","FootballManager","Motogp","SuperMegaBaseball","eFootballPES","GolfWithYourFriends",
+"RidersRepublic","RocketLeague","ArchRivals","TigerWoodsPGATour","Excitebike","BlitzTheLeague","ESPNNFL","NCAAFootball","WiiSports","NCAABasketball",
+"SuperDodgeBall","CaliforniaGames","HydroThunder","BladesofSteel","GranTurismo","DiRTRally","SportsChampions","VirtuaTennis","MarioTennis",
+"NBAStreet","NBALive","NBAJam","BackyardSportsSeries","SnowboardSuperCross","TecmoSuperBowl"],
+fps: ["HalfLife","TheOrangeBox","BioShock","Quake","UnrealTournament","CallOfDuty","MedalOfHonnor","Overwatch","Halo","Crysis","Battlefield","Fallout",
+"FEAR","MetroSeries","DeusEx","LeftFourDead","Borderlands","DukeNukem","FarCry","Descent","ApexLegends","CounterStrike","Valorant","DoomEternal",
+"SteinsGate","YearWalk","Deathloop","BrothersinArms","SeriousSam","TitanFall","Wolfenstein","Pubg","TCRainbowSix",
+"ReadyOrNot","SwatSeries","OperationFlashpoint","Destiny","Doom","BlackMesa","SuperHot","PainKiller","StarWarsBattlefront"]
 };
 //count
 let winCount = 0;
@@ -20,7 +38,7 @@ let count = 0;
 let chosenWord = "";
 //Display option buttons
 const displayOptions = () => {
-  optionsContainer.innerHTML += `<h3>Please Select Game Branch</h3>`;
+  optionsContainer.innerHTML += `<h3>Please Select Game Class</h3>`;
   let buttonCon = document.createElement("div");
   for (let value in options) {
     buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
